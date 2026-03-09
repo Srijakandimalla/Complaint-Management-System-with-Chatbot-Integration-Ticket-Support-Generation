@@ -1,0 +1,190 @@
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#e9edf2;
+margin:0;
+padding:0;
+}
+
+
+
+/* container */
+
+.container{
+width:500px;
+margin:auto;
+margin-top:80px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+
+
+/* inputs */
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+
+
+/* buttons */
+
+button{
+background:#4f6edb;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#3c55b5;
+}
+
+
+
+/* chatbox */
+
+.chatbox{
+height:250px;
+border:1px solid #ddd;
+border-radius:8px;
+padding:10px;
+overflow-y:auto;
+margin-bottom:10px;
+text-align:left;
+}
+
+
+
+/* dashboard cards */
+
+.stats{
+display:flex;
+gap:30px;
+justify-content:center;
+margin-top:40px;
+}
+
+
+
+.card{
+padding:20px;
+border-radius:10px;
+color:white;
+width:180px;
+text-align:center;
+font-weight:600;
+box-shadow:0px 3px 8px rgba(0,0,0,0.1);
+}
+
+
+
+.blue{
+background:#4f6edb;
+}
+
+.cyan{
+background:#27b4c7;
+}
+
+.yellow{
+background:#f4b400;
+}
+
+.green{
+background:#21a366;
+}
+
+
+
+/* table */
+
+table{
+width:85%;
+margin:auto;
+margin-top:40px;
+border-collapse:collapse;
+background:white;
+box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+border-radius:8px;
+overflow:hidden;
+}
+
+
+
+th{
+background:#2f3b52;
+color:white;
+padding:14px;
+}
+
+
+
+td{
+padding:12px;
+border-bottom:1px solid #eee;
+text-align:center;
+}
+
+
+
+tr:hover{
+background:#f8fafc;
+}
+
+
+
+/* buttons */
+
+.start-btn{
+background:#facc15;
+padding:6px 12px;
+border-radius:5px;
+color:black;
+font-weight:600;
+text-decoration:none;
+}
+
+
+
+.resolve-btn{
+background:#16a34a;
+padding:6px 12px;
+border-radius:5px;
+color:white;
+font-weight:600;
+text-decoration:none;
+}
+
+
+
+/* status colors */
+
+.status-open{
+color:#555;
+font-weight:600;
+}
+
+
+
+.status-progress{
+color:#f59e0b;
+font-weight:600;
+}
+
+
+
+.status-resolved{
+color:#16a34a;
+font-weight:600;
+}

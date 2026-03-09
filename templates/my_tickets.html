@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>My Tickets</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<h2 style="text-align:center">🎫 My Complaints</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Complaint</th>
+<th>Status</th>
+</tr>
+
+{% for t in tickets %}
+
+<tr>
+
+<td>{{t[0]}}</td>
+<td>{{t[2]}}</td>
+<td>{{t[6]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

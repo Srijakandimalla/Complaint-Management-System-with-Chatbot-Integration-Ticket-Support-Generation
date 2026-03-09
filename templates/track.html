@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Track Complaint</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🔎 Track Complaint</h2>
+
+<form method="POST">
+
+<input name="ticket_id" placeholder="Enter Ticket ID">
+
+<br><br>
+
+<button>Check Status</button>
+
+</form>
+
+{% if ticket %}
+
+<br>
+
+<p><b>Complaint:</b> {{ticket[2]}}</p>
+
+<p><b>Category:</b> {{ticket[3]}}</p>
+
+<p><b>Priority:</b> {{ticket[4]}}</p>
+
+<p><b>Status:</b> {{ticket[6]}}</p>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

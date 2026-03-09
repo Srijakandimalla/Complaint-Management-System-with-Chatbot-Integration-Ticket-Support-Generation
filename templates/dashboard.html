@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Complaint Dashboard</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<h2 style="text-align:center;">📊 Complaint Dashboard</h2>
+
+<div class="stats">
+
+<div class="card blue">
+Total Tickets
+<h2>{{total}}</h2>
+</div>
+
+<div class="card cyan">
+Technical
+<h2>{{technical}}</h2>
+</div>
+
+<div class="card yellow">
+Billing
+<h2>{{billing}}</h2>
+</div>
+
+<div class="card green">
+Service
+<h2>{{service}}</h2>
+</div>
+
+</div>
+
+
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Complaint</th>
+<th>Category</th>
+<th>Priority</th>
+<th>Team</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+
+{% for t in tickets %}
+
+<tr>
+
+<td>{{t[0]}}</td>
+
+<td>{{t[2]}}</td>
+
+<td>{{t[3]}}</td>
+
+<td>{{t[4]}}</td>
+
+<td>{{t[5]}}</td>
+
+
+<td>
+
+{% if t[6] == "Open" %}
+<span class="status-open">Open</span>
+{% endif %}
+
+{% if t[6] == "In Progress" %}
+<span class="status-progress">In Progress</span>
+{% endif %}
+
+{% if t[6] == "Resolved" %}
+<span class="status-resolved">Resolved</span>
+{% endif %}
+
+</td>
+
+
+
+<td>
+
+{% if t[6] == "Open" %}
+<a class="start-btn" href="/update_status/{{t[0]}}/In Progress">
+▶ Start
+</a>
+{% endif %}
+
+
+{% if t[6] == "In Progress" %}
+<a class="resolve-btn" href="/update_status/{{t[0]}}/Resolved">
+✔ Resolve
+</a>
+{% endif %}
+
+
+{% if t[6] == "Resolved" %}
+<span style="color:green;font-weight:bold;">
+✔ Completed
+</span>
+{% endif %}
+
+</td>
+
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<div style="text-align:center">
+
+<a href="/">⬅ Back to Chatbot</a>
+
+</div>
+
+</body>
+</html>
